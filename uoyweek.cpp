@@ -41,16 +41,16 @@ class Term {
     }
 };
 
-Term * aut  = new Term("aut", (time_t) 1506297600l, (time_t) 1512086400l);
-Term * spr  = new Term("spr", (time_t) 1515369600l, (time_t) 1521158400l);
+Term * aut  = new Term("Aut", (time_t) 1506297600l, (time_t) 1512086400l);
+Term * spr  = new Term("Spr", (time_t) 1515369600l, (time_t) 1521158400l);
 string days[] = {
-    "sunday",
-    "monday",
-    "tuesday",
-    "wednesday",
-    "thursday",
-    "friday",
-    "saturday"
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday"
 };
 
 time_t normaliseToMonday(time_t toNormalise) {
