@@ -80,17 +80,22 @@ Term * getTerm(time_t now) {
     exit(5);
 }
 
-string getString() {
+string getString(bool capitalize) {
     time_t now = time(0);
     Term *term = getTerm(now);
+	string code = term->code;
     int week = getWeek(now, term);
     string day = days[gmtime(&now)->tm_wday].substr(0,3);
+	if (capitalize) {
+		code[0] = std::toupper(code[0]);
+		day[0] = std::toupper(day[0]);
+	}
     int length = strlen(term->code.c_str()) + 2 + 3 + (week>=10?2:1) + 1;
     char* str = (char*) malloc(sizeof(char) * length);
-    snprintf(str, length, "%s/%d/%s", term->code.c_str(), week, day.c_str());
+    snprintf(str, length, "%s/%d/%s", code.c_str(), week, day.c_str());
     return str;
 }
 
 int main(void) {
-    cout << getString() <<endl;
+    cout << getString(false) << endl;
 }

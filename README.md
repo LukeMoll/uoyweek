@@ -13,7 +13,7 @@ chmod +x uoyweek
 ```
 You now have an executable file, `uoyweek`. To run it while you're in `uoyweek/`, just type `./uoyweek`. You'll probably want it in a more useful place though.
 ```bash
-sudo mv uoyweek /usr/bin
+sudo mv uoyweek /usr/local/bin
 ```
 You should now be able to run `uoyweek` from any directory.
 
