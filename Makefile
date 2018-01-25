@@ -1,21 +1,21 @@
-PREFIX ?= /usr/local/bin
+PREFIX ?= /usr/local
+CPPFLAGS ?= -Wall -Wextra -pedantic
 
 target := uoyweek
-source := uoyweek.cpp
 
-.DEFAULT_GOAL := $(target)
+.PHONY: all run install clean
 
-.PHONY: run install clean
+%: %.cpp
+	$(CXX) $(CPPFLAGS) -o $@ $<
 
-$(target): $(source)
-	$(CXX) -Wall -Wextra -pedantic $< -o $@
-	chmod +x $@
+all: $(target)
 
 run: $(target)
 	./$(target) $(ARGS)
 
 install: $(target)
-	cp $^ $(PREFIX)
+	mkdir -p $(PREFIX)/bin
+	cp $^ $(PREFIX)/bin
 
 clean:
 	$(RM) $(target)
