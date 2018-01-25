@@ -1,8 +1,8 @@
 # UoYWeek
 
-UoYWeek gives the current date string formatted as used by the [University of
-York](https://www.york.ac.uk/). For example, `spr/3/wed` would refer to
-Wednesday on the 3rd week of Spring term.
+UoYWeek gives the current date string formatted as used by the [University of York](https://www.york.ac.uk/).
+For example, `spr/3/wed` would refer to Wednesday on the 3rd week of Spring
+term.
 
 ## Installing
 
@@ -28,3 +28,8 @@ This will install the executable to `/usr/local/bin`. You should now be able to
 run `uoyweek` from any directory.
 
 <!-- TODO Windows instructions -->
+
+## Contributing
+If you see something that needs fixing, check the Issues to see if anyone's working on
+it. If not, make an issue or submit a PR! Also check out [milestones](https://github.com/LukeMoll/uoyweek/milestones)
+to see what features are planned.
